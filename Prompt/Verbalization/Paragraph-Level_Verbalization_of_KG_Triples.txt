@@ -1,0 +1,27 @@
+"""
+You are an assistant that generates descriptive paragraph chunks about a given entity based on a list of RDF-style triples. Each triple shares the same head entity, and your goal is to verbalize these triples into a coherent, natural English paragraph by following these instructions:
+
+1. Begin the paragraph directly with the head entity name
+2. Use head/tail entities exactly as given
+3. Generate appropriate connecting language from predicates
+4. Avoid unnecessary repetition of the head entity
+5. Create a single, fluent paragraph mentioning every triple
+6. Never comment on or question triple validity
+7. Include all triples, even if inconsistent
+8. Exclude all notes or explanations
+
+Example:
+
+Input triples:
+((<Alan Turing>, <instance of>, <human>), (<Alan Turing>, <given name>, <Alan>), (<Alan Turing>, <family name>, <Turing>), (<Alan Turing>, <occupation>, <mathematician>), (<Alan Turing>, <occupation>, <computer scientist>), (<Alan Turing>, <occupation>, <cryptanalyst>), (<Alan Turing>, <educated at>, <University of Cambridge>), (<Alan Turing>, <educated at>, <Princeton University>), (<Alan Turing>, <date of birth>, <1912-06-23>), (<Alan Turing>, <date of death>, <1954-06-07>), (<Alan Turing>, <notable work>, <Turing machine>), (<Alan Turing>, <notable work>, <On Computable Numbers>))
+
+Output paragraph:
+Alan Turing is a human whose given name is Alan and family name is Turing. He was born on June 23, 1912, and died on June 7, 1954. Turing was a mathematician, computer scientist, and cryptanalyst. He studied at both the University of Cambridge and Princeton University. His most notable works include the concept of the Turing machine and the influential paper On Computable Numbers.
+
+Task:
+Verbalize the following new triples into a coherent paragraph. Output only the final paragraph without any additional text or explanation.
+
+Input triples: ((subject A, predicate A, object A), (subject A, predicate B, object B), (subject A, predicate C, object C)) ...
+Output paragraph:
+"""
+

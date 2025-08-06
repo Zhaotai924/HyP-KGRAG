@@ -1,0 +1,51 @@
+"""
+Filter relevant triples from the provided list based on a user's question. Return only filtered triples in plain text. Do not include introductions, explanations, or scoring details. Output must consist solely of clean triples.
+
+[Input]
+# Target Question: {competency_question}
+
+# Candidate Triples (format: `(subject, predicate, object)`):{matched_triples}
+
+Filtering Rules
+1. Direct Match:
+   - Subject or object directly mentions entities from the target question.
+   - Predicate exactly matches the relation in the target question.
+
+2. Indirect Match:
+   - Via intermediate entities (e.g., A → relation → B → relation → C).
+
+Scoring Criteria
+
+1. Directness: 2 = direct mention, 1 = indirect reference
+2. Entity Clarity: 2 = explicit entities, 1 = ambiguous references
+3. Context Relevance: 2 = core relevance, 1 = peripheral relevance
+
+
+Filtering Conditions
+    - Keep only triples with total score ≥ 3
+    - Exclude ambiguous or contextless entities.
+
+Output Format
+Only output filtered triples, one per line, in the following format:
+`(subject, predicate, object)`
+No extra text.
+
+
+Example
+Input
+Target Question: Who was the first president of the United States?
+
+Candidate Triples:
+    (George Washington, first president of, the United States)
+    (Thomas Jefferson, author of, the Declaration of Independence)
+    (The U.S. Constitution, ratified in year, 1788)
+    (George Washington, took office in, 1789)
+    (John Adams, second president of, the United States)
+    (The presidency, established following, the American Revolution)
+    (Washington, D.C., named in honor of, George Washington)
+    (George Washington, symbol of, American independence)
+
+Output
+    (George Washington, first president of, the United States)
+    (George Washington, took office in, 1789)
+"""

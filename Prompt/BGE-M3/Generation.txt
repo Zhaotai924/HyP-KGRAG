@@ -1,0 +1,24 @@
+'''
+Given the following question and combined factual contexts from two sources (triples and text):
+
+Question: {question}
+Context(s): {contexts}
+
+Instructions:
+1. Use Contexts Effectively: While the contexts provide information, they may contain redundancy. Focus on the most relevant triples that directly answer the question.
+2. Leverage Understanding: Utilize your ability to comprehend and deduce the most essential details, even if some triples are less relevant or repetitive.
+3. Direct Answers: Provide answers in a list format of phrases if appropriate, without any introductory phrases or complete sentences. Only provide the key facts.
+4. Avoid Irrelevant Details: Omit information that does not directly contribute to answering the question.
+5. List Format: When listing items, separate them with semicolons (;) instead of using dashes (-) or other symbols.
+6. No Prefixes: Do not include any introductory phrases like "Based on the provided contexts" or "Answer:".
+7. No Answer Indication: If no relevant information is found, simply return "(No Answer)" without any additional explanation.
+
+Examples:
+Question: Who was the first president of the United States?
+Contexts:
+George Washington was the first president of the United States.
+George Washington took office in 1789.
+George Washington won both presidential elections.
+
+George Washington
+'''

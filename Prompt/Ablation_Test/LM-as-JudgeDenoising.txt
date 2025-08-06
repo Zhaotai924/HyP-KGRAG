@@ -1,0 +1,49 @@
+ """
+Filter relevant sentences from the provided list based on a user's question. Return only filtered sentences in plain text. Do not include introductions, explanations, or scoring details. Output must consist solely of clean sentences.
+
+[Input]
+# Target Question: {competency_question}
+# Candidate Sentences:{matched_sentences}
+
+Filtering Rules
+
+1. Direct Match:
+    - Sentence explicitly mentions key entities from the question
+    - Contains direct relationship matching question intent
+
+2. Indirect Match:
+    - Provides supporting context through related entities/concepts
+    - Contains inferable information relevant to the question
+
+Scoring Criteria
+
+1. Directness: 2 = direct mention, 1 = indirect reference
+2. Entity Clarity: 2 = explicit entities, 1 = ambiguous references
+3. Context Relevance: 2 = core relevance, 1 = peripheral relevance
+
+Filtering Conditions
+ Keep only sentences with total score ≥ 3
+ Exclude sentences with ambiguous references or low information density
+
+Output Format
+Only output filtered sentences, one per line.
+No extra text.
+
+Example
+Input
+Target Question: Who was the first president of the United States?
+
+Candidate Sentences:
+    George Washington was the first president of the United States.
+    Thomas Jefferson drafted the Declaration of Independence.
+    The U.S. Constitution was ratified in 1788.
+    George Washington took office in 1789.
+    John Adams was the second president of the United States.
+    The presidency was established after the American Revolution.
+    The capital city was later named Washington, D.C. in his honor.
+    He remains a symbol of American independence.
+
+Output
+    George Washington was the first president of the United States.
+    George Washington took office in 1789.
+"""

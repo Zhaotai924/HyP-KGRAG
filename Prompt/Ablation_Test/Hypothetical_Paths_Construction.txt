@@ -1,0 +1,48 @@
+"""
+Task: For a given user question, analyze step-by-step and generate reasoning paths that meet the following conditions:
+
+    1.Output Format: Multiple sentences, using natural language to express relationships.
+    2.Class Constraints: Classes are allowed as bridging nodes in the path.
+    3.Path Quantity: A maximum of 2 distinct reasoning paths must be generated.
+
+Processing Guidelines:
+    1.Path Completion: If a direct relation is missing, insert a class constraint as an intermediate node.
+    2.Direction Control: Sentence logic must align with semantic relationships.
+    3.Dynamic Length: Sentence complexity adapts to the question’s needs.
+    4.Prioritization: If multiple valid paths exist, select the 2 most semantically complete and logically concise paths.
+
+Examples
+
+Example 1 (Single-hop Question)
+Question: "Who is the director of the movie 'Inception'?"
+Reasoning Path:
+    The person is the director of the movie Inception.
+    Inception is directed by a director.
+Output:
+    The person is the director of the movie Inception.
+    Inception is directed by a director.
+
+Example 2 (Multi-hop Question)
+Question: "Which researcher from MIT published the dataset 'Nano2023' cited in 'Advanced Materials Lecture 5'?"
+Reasoning Path:
+
+Path 1: From MIT to Citation
+    MIT has an affiliated researcher.
+    The researcher published the dataset Nano2023.
+    Advanced Materials Lecture 5 cites the dataset Nano2023.
+
+Path 2: From Citation to MIT
+    Advanced Materials Lecture 5 cites the dataset Nano2023.
+    Nano2023 is published by MIT.
+    MIT employs a researcher.
+
+Output:
+    MIT has an affiliated researcher.
+    The researcher published the dataset Nano2023.
+    Advanced Materials Lecture 5 cites the dataset Nano2023.
+    Advanced Materials Lecture 5 cites the dataset Nano2023.
+    Nano2023 is published by MIT.
+    MIT employs a researcher.
+
+Question: {question}
+"""

@@ -1,0 +1,32 @@
+ '''
+Your task is to analyze a given question and provide refined outputs by following the structured chain of thought below.  
+
+Instructions:  
+1. Generate Three Answers: Think of three possible answers to the given question `{Question}`.  
+2. Identify Missing Element: Determine whether the question is missing a subject or an object.  
+3. Rewrite Answers: For the three answers, rewrite them by removing the missing element and eliminating unnecessary stopwords (e.g., "an," "the," etc.).  
+4. Output in Phrase Form: Provide the final output as concise phrases only.  
+
+**Example**  
+**Given Question:** *"Who is researching Renewable Energy technologies?"*  
+- **Possible Answers:**  
+   1. "Dr. B leads innovations in the Renewable Energy technologies."  
+   2. "Dr. B develops renewable energy solutions."  
+   3. "Dr. B is exploring advancements in renewables."  
+
+- **Missing Element:** *Subject*  
+
+- **Rewritten Answers:**  
+   1. "lead innovations in Renewable Energyy technologies"  
+   2. "develope renewable energy solutions"  
+   3. "exploring advancements in renewables"  
+
+**Final Output:**  
+- lead innovations in Renewable Energy technologies  
+- developing renewable energy solutions  
+- exploring advancements in renewables  
+
+Requirements:  
+- Display **only the final three phrases** as output.  
+- Do not include explanations, intermediate steps, or any additional information.  
+''' 
