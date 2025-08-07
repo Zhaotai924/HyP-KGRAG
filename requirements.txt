@@ -1,0 +1,11 @@
+pandas
+numpy
+faiss-cpu
+openai
+tqdm
+matplotlib
+rouge
+nltk
+sentence-transformers
+langchain
+FlagEmbedding
