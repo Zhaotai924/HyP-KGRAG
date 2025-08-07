@@ -7,7 +7,7 @@ This repository contains all code, data, and prompt templates used in my work on
 
 ## 📁 Repository Structure
 
-### 🔹 `Data/`
+### 🔹 `Data`
 
 This folder contains all datasets and intermediate results used throughout the project. Each subfolder serves a specific purpose:
 
@@ -23,7 +23,7 @@ This folder contains all datasets and intermediate results used throughout the p
 
 ---
 
-### 📒 `notebook/`
+### 📒 `Notebook`
 
 This folder includes all implementation code written in Jupyter Notebook. Each notebook corresponds to a component or experiment:
 
@@ -39,7 +39,7 @@ This folder includes all implementation code written in Jupyter Notebook. Each n
 
 ---
 
-### 🧠 `Prompt/`
+### 🧠 `Prompt`
 
 This folder includes all prompt templates used in each notebook. Every script in this project is built on top of the **DeepSeek V3** language model. Prompt files are named to match the corresponding notebooks for easy reference and reproducibility.
 
@@ -47,23 +47,41 @@ This folder includes all prompt templates used in each notebook. Every script in
 
 ## 🚀 Getting Started
 
-1. Install all dependencies (recommended to use a virtual environment or Conda).
-2. Follow the suggested order to run notebooks:
-
-   * `KGPreprocess.ipynb`
-   * Retriever and Rewriter (choose one baseline):
-
-     * `BGE-M3_Retriever.ipynb` / `BM25_Retriever.ipynb`
-     * `BGE-M3_Retwriter.ipynb` / `BM25_Rewriter.ipynb`
-   * Main framework:
-
-     * `HyPKGRAG.ipynb`
-   * Analysis and visualization:
-
-     * `Ablation_Verbalization.ipynb`
+下面是更新后的 **Getting Started** 部分，用英文重写并整合你给出的说明，使其清晰、简洁且专业：
 
 ---
 
+## 🚀 Getting Started
+
+1. **Install all dependencies**
+   It is strongly recommended to use a virtual environment (e.g., `conda` or `venv`) before installing the required packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run the notebooks in the following order:**
+
+   > 🔁 *Start with data preprocessing → then run retrieval & query rewriting → finally execute the main framework.*
+
+   * **Step 1: Preprocess the Knowledge Graph**
+
+     * `KGPreprocess.ipynb`
+
+   * **Step 2: Run Retriever and Rewriter (choose one baseline):**
+
+     * Retrieval:
+
+       * `BGE-M3_Retriever.ipynb` *or* `BM25_Retriever.ipynb`
+     * Query Rewriting:
+
+       * `BGE-M3_Retwriter.ipynb` *or* `BM25_Rewriter.ipynb`
+
+   * **Step 3: Run the Main Framework**
+
+     * `HyPKGRAG.ipynb`
+
+---
 ## 🧪 Notes
 
 * The core idea of this project is the **HyP-KGRA** framework, which introduces hypothetical triples based on reasoning paths and aligns them with factual triples in a shared vector space.
