@@ -47,12 +47,6 @@ This folder includes all prompt templates used in each notebook. Every script in
 
 ## 🚀 Getting Started
 
-下面是更新后的 **Getting Started** 部分，用英文重写并整合你给出的说明，使其清晰、简洁且专业：
-
----
-
-## 🚀 Getting Started
-
 1. **Install all dependencies**
    It is strongly recommended to use a virtual environment (e.g., `conda` or `venv`) before installing the required packages:
 
