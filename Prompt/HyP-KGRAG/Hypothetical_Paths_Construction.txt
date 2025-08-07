@@ -12,29 +12,24 @@ Task: For a given user question, analyze step-by-step and generate reasoning pat
 - Prioritization: If multiple valid paths exist, select the 2 most semantically complete and logically concise paths.
 
 
+
 **Examples**  
-
-**Example 1 (Single-hop Question)**  
-**Question**: *"Who is the director of the movie 'Inception'?"*  
-**Reasoning Path**:  
-    (Person, is director of, Inception)
-    (Inception, directed by, Director)
-
-
-    
-**Example 2 (Multi-hop Question)**  
-**Question**: *"Which researcher from MIT published the dataset 'Nano2023' cited in 'Advanced Materials Lecture 5'?"*  
-**Reasoning Path**:  
-# Path 1: From MIT to Citation  
-(MIT, has affiliation, Researcher)  
-(Researcher, published, Nano2023)  
-(Advanced Materials Lecture 5, cites, Nano2023)  
-
-# Path 2: From Citation to MIT  
-(Advanced Materials Lecture 5, cites, Nano2023)  
-(Nano2023, published by, MIT)  
-(MIT, employs, Researcher) 
-
+**Example 1 (Single-hop Question)**
+**Question**: *"Who published the dataset ’Nano2023'?"*
+**Reasoning Path**:
+    (Person, published, Nano2023)
+   (Nano2023, published by, Person)
+**Example 2 (Multi-hop Question)**
+**Question**: *"Which researcher from MIT published the dataset 'Nano2023' cited in 'Advanced Materials Lecture 5'?"*
+**Reasoning Path**:
+# Path 1: From MIT to Citation
+(Researcher, affiliation, MIT)
+(Researcher, published, Nano2023)
+(Advanced Materials Lecture 5, cites, Nano2023)
+# Path 2: From Citation to MIT
+(Advanced Materials Lecture 5, cites, Nano2023)
+(Nano2023, published by, MIT)
+(MIT, employs, Researcher)
 **Question**: {question}
 
 """
